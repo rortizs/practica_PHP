@@ -1,0 +1,25 @@
+body{
+    background: #4b6cb7;
+}
+h1,p,a{
+    font-family: 'Courier New', Courier, monospace;
+    display: block;
+    text-align: center;
+    line-height: .8;
+    color: white;
+}
+.contenido{
+    max-width: 1200px;
+    margin: 5rem auto 0 auto;
+    color: white;
+    font-size: 3rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+h1{
+    font-size: 4rem;
+}
+
+h2{
+    font-size: 5rem;
+    color: white;
+}
