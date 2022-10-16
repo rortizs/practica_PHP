@@ -119,9 +119,86 @@ $cliente = [
 
 $cliente['codigo'] = 12323;
 
-echo "<pre>";
-var_dump($cliente);
-echo "</pre>";
+//echo "<pre>";
+//var_dump($cliente);
+//echo "</pre>";
+
+//**CONDICIONALES EN PHP */
+
+$autenticando = true;
+$admin = false;
+
+//condicion if
+//if ($autenticando && $admin) {
+//    echo "Usuario auntenticado correctamente";
+//} else {
+//    echo "Usuario no autenticado, inicia sesión";
+//}
+
+//if anidado
+$cliente = [
+    'nombre' => 'Otto',
+    'saldo' => 0,
+    'Informacion' => [
+        'tipo' => 'regular'
+    ]
+];
+
+//echo "<br>";
+//if (!empty($cliente)) {
+//    echo 'El arreglo de cliente no esta vacio.';
+
+//    if ($cliente['saldo'] <= 0) {
+//        echo "Cliente tiene saldo disponible";
+//    } else {
+//        echo "  No hay saldo";
+//    }
+//}
+//echo "<br>";
+
+//**foreach */
+$productos = [
+    [
+        'codigo' => 1,
+        'nombre' => 'tablet',
+        'precio' => 200,
+        'disponible' => true
+    ],
+    [
+        'codigo' => 2,
+        'nombre' => 'Smart TV',
+        'precio' => 2000,
+        'disponible' => true
+    ],
+    [
+        'codigo' => 3,
+        'nombre' => 'tablet2',
+        'precio' => 300,
+        'disponible' => false
+    ]
+];
+
+//recorrido lo puedo realizar con foreach
+foreach ($productos as $producto) {
+?><li>
+        <p>Producto: <?php echo $producto['nombre']; ?> </p>
+        <p>Precio: <?php echo "Q. " . $producto['precio']; ?> </p>
+        <p><?php echo ($producto['disponible']) ? 'Disponible' : 'No disponible'; ?></p>
+    </li>
+<?php
+}
+
+//**funciones */
+function sumar(int $numero1 = 0, int $numero2 = 0)
+{
+    echo $numero1 + $numero2;
+}
+sumar(10, 10);
+//echo sumar();
+
+
+
+
 
 
 ?>
